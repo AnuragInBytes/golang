@@ -39,39 +39,39 @@ func pow(x, n, lim float64) float64 {
 func main() {
 
 	// switch case
-	// fmt.Print("Go runs on : ")
-	// switch os:= runtime.GOOS; os {
-	// case "darwin":
-	// 	fmt.Println("OS X.")
-	// case "linux":
-	// 	fmt.Println("Linux.")
-	// default:
-	// 	fmt.Printf("%s.\n", os)
-	// }
+	fmt.Print("Go runs on : ")
+	switch os:= runtime.GOOS; os {
+	case "darwin":
+		fmt.Println("OS X.")
+	case "linux":
+		fmt.Println("Linux.")
+	default:
+		fmt.Printf("%s.\n", os)
+	}
 
-	// fmt.Println("When is Saturday?")
-	// today := time.Now().Weekday()
-	// switch time.Saturday {
-	// case today + 0:
-	// 	fmt.Println("Today.")
-	// case today + 1:
-	// 	fmt.Println("Tomorrow")
-	// case today + 2:
-	// 	fmt.Println("Day after Tomorrow")
-	// default:
-	// 	fmt.Println("Too far away")
+	fmt.Println("When is Saturday?")
+	today := time.Now().Weekday()
+	switch time.Saturday {
+	case today + 0:
+		fmt.Println("Today.")
+	case today + 1:
+		fmt.Println("Tomorrow")
+	case today + 2:
+		fmt.Println("Day after Tomorrow")
+	default:
+		fmt.Println("Too far away")
 
-	// }
+	}
 
-	// t := time.Now()
-	// switch {
-	// case t.Hour() < 12:
-	// 	fmt.Println("Good Morning!")
-	// case t.Hour() < 17:
-	// 	fmt.Println("Good afternoon")
-	// default:
-	// 	fmt.Println("Good evening")
-	// }
+	t := time.Now()
+	switch {
+	case t.Hour() < 12:
+		fmt.Println("Good Morning!")
+	case t.Hour() < 17:
+		fmt.Println("Good afternoon")
+	default:
+		fmt.Println("Good evening")
+	}
 
 	// defer
 	// defer fmt.Println("World")
