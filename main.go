@@ -168,6 +168,23 @@ func main() {
 	fmt.Println("valueo of l: ", *ptr)
 	*ptr = *ptr / 53
 	fmt.Println("New value of l: ",l)
+
+	// struct
+	type Vertex struct {
+		X int
+		Y int
+	}
+	fmt.Println(Vertex{3, 5})
+	v := Vertex{90,89}
+	v.X = 69
+	fmt.Println(v.X, v.Y)
+
+	v2 := Vertex{1, 2}
+	ptrr := &v2
+	fmt.Println(ptrr)
+	fmt.Println(*ptrr)
+	ptrr.X = 1e9
+	fmt.Println(v2)
 }
 
 func genRandNum() {
