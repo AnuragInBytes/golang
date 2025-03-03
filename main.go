@@ -5,6 +5,8 @@ import (
 	"math"
 	"math/cmplx"
 	"math/rand" //small letters and as short as possible
+	"runtime"
+	"time"
 )
 
 var c, python, java bool //variable is not in unintialize, always in zero values(lower bound) OUTSIDE OF FUNCTION
@@ -15,7 +17,103 @@ var (
 	z complex128 = cmplx.Sqrt(-5 + 12i)
 )
 
+//conditional statements
+// func sqrt (x float64) string {
+// 	if x < 0 {
+// 		return sqrt(-x) + "i"
+// 	}
+
+// 	return fmt.Sprint(math.Sqrt(x))
+// }
+
+// func pow(x, n, lim float64) float64 {
+// 	if v:= math.Pow(x, n); v < lim {
+// 		return v
+// 	} else {
+// 		fmt.Printf("%g >= %g\n", v, lim)
+// 	}
+
+// 	return lim
+// }
+
 func main() {
+
+	// switch case
+	// fmt.Print("Go runs on : ")
+	// switch os:= runtime.GOOS; os {
+	// case "darwin":
+	// 	fmt.Println("OS X.")
+	// case "linux":
+	// 	fmt.Println("Linux.")
+	// default:
+	// 	fmt.Printf("%s.\n", os)
+	// }
+
+	// fmt.Println("When is Saturday?")
+	// today := time.Now().Weekday()
+	// switch time.Saturday {
+	// case today + 0:
+	// 	fmt.Println("Today.")
+	// case today + 1:
+	// 	fmt.Println("Tomorrow")
+	// case today + 2:
+	// 	fmt.Println("Day after Tomorrow")
+	// default:
+	// 	fmt.Println("Too far away")
+
+	// }
+
+	// t := time.Now()
+	// switch {
+	// case t.Hour() < 12:
+	// 	fmt.Println("Good Morning!")
+	// case t.Hour() < 17:
+	// 	fmt.Println("Good afternoon")
+	// default:
+	// 	fmt.Println("Good evening")
+	// }
+
+	// defer
+	// defer fmt.Println("World")
+	// fmt.Println("Hello")
+
+	// fmt.Println("Ouput of pow function: ")
+
+	// fmt.Println(
+	// 	pow(3, 2, 10),
+	// 	pow(3, 3, 20),
+	// )
+
+	// fmt.Println("Output of sqrt func: ")
+	// fmt.Println(sqrt(2), sqrt(-4))
+
+	//loops
+	// 1.for loop
+	summ := 0
+	for i := 0; i < 10; i++ {
+		summ += i
+	}
+
+	fmt.Println(summ)
+	//2. while loop
+	sum3 := 1
+	for sum3 < 1000 {
+		sum3 += sum3
+	}
+	fmt.Println("the sum3 is : ", sum3)
+
+	//3. infinite loop
+	sum4 := 1
+	for {
+		sum4 += sum4
+		if(sum4 > 100) {
+			break
+		}
+	}
+	fmt.Println("sum4: ", sum4)
+
+
+	// variables
 
 	var i int
 	fmt.Println(i, c, java, python)
@@ -34,7 +132,11 @@ func main() {
 	var st string
 	fmt.Printf("%v %v %v %q\n", c, f, d, st)
 
+	// fmt print
+
 	fmt.Println("Hello, 世界")
+
+	//functions
 	genRandNum()
 	fmt.Println(math.Pi) //encapsulation: always access with capital letters if in another package
 	fmt.Println(sum(42, 45))
@@ -42,6 +144,15 @@ func main() {
 	fmt.Println(a, b)
 
 	fmt.Println(split(17))
+
+
+	// fmt.Println("Counting")
+
+	// for i := 0; i < 10; i++ {
+	// 	defer fmt.Println(i)
+	// }
+
+	// fmt.Println("done")
 }
 
 func genRandNum() {
