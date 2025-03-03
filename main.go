@@ -185,6 +185,18 @@ func main() {
 	fmt.Println(*ptrr)
 	ptrr.X = 1e9
 	fmt.Println(v2)
+
+	// array
+	var str [2]string
+	str[0] = "Hello"
+	str[1] = "world"
+
+	fmt.Println(str[0], str[1])
+	fmt.Println(str)
+
+	primes := [6]int{2, 3, 5, 7, 11}
+	fmt.Println(primes)
+
 }
 
 func genRandNum() {
