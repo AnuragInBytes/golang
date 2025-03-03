@@ -18,23 +18,23 @@ var (
 )
 
 //conditional statements
-// func sqrt (x float64) string {
-// 	if x < 0 {
-// 		return sqrt(-x) + "i"
-// 	}
+func sqrt (x float64) string {
+	if x < 0 {
+		return sqrt(-x) + "i"
+	}
 
-// 	return fmt.Sprint(math.Sqrt(x))
-// }
+	return fmt.Sprint(math.Sqrt(x))
+}
 
-// func pow(x, n, lim float64) float64 {
-// 	if v:= math.Pow(x, n); v < lim {
-// 		return v
-// 	} else {
-// 		fmt.Printf("%g >= %g\n", v, lim)
-// 	}
+func pow(x, n, lim float64) float64 {
+	if v:= math.Pow(x, n); v < lim {
+		return v
+	} else {
+		fmt.Printf("%g >= %g\n", v, lim)
+	}
 
-// 	return lim
-// }
+	return lim
+}
 
 func main() {
 
@@ -77,15 +77,15 @@ func main() {
 	// defer fmt.Println("World")
 	// fmt.Println("Hello")
 
-	// fmt.Println("Ouput of pow function: ")
+	fmt.Println("Ouput of pow function: ")
 
-	// fmt.Println(
-	// 	pow(3, 2, 10),
-	// 	pow(3, 3, 20),
-	// )
+	fmt.Println(
+		pow(3, 2, 10),
+		pow(3, 3, 20),
+	)
 
-	// fmt.Println("Output of sqrt func: ")
-	// fmt.Println(sqrt(2), sqrt(-4))
+	fmt.Println("Output of sqrt func: ")
+	fmt.Println(sqrt(2), sqrt(-4))
 
 	//loops
 	// 1.for loop
