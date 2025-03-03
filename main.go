@@ -74,8 +74,8 @@ func main() {
 	}
 
 	// defer
-	// defer fmt.Println("World")
-	// fmt.Println("Hello")
+	defer fmt.Println("World")
+	fmt.Println("Hello")
 
 	fmt.Println("Ouput of pow function: ")
 
@@ -146,13 +146,13 @@ func main() {
 	fmt.Println(split(17))
 
 
-	// fmt.Println("Counting")
+	fmt.Println("Counting")
 
-	// for i := 0; i < 10; i++ {
-	// 	defer fmt.Println(i)
-	// }
+	for i := 0; i < 10; i++ {
+		defer fmt.Println(i)
+	}
 
-	// fmt.Println("done")
+	fmt.Println("done")
 }
 
 func genRandNum() {
