@@ -153,6 +153,21 @@ func main() {
 	}
 
 	fmt.Println("done")
+
+	// pointers
+	k , l := 42, 106
+
+	ptr := &k
+	fmt.Println("Address fo k: ", ptr)
+	fmt.Println("Value of k: ", *ptr)
+
+	*ptr = 36
+	fmt.Println("New value of k: ", k)
+
+	ptr = &l
+	fmt.Println("valueo of l: ", *ptr)
+	*ptr = *ptr / 53
+	fmt.Println("New value of l: ",l)
 }
 
 func genRandNum() {
